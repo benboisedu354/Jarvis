@@ -1,0 +1,16 @@
+{
+  "habits": {
+    "Météo": {
+      "frequency": "tous les jours",
+      "learned_at": "2026-04-27T00:28:36.768988"
+    }
+  },
+  "interactions": [
+    {
+      "user_input": "Affiche la météo",
+      "response": "Voici la météo du jour : Ensoleillé, 25°C.",
+      "success": true,
+      "timestamp": "2026-04-27T00:28:37.771091"
+    }
+  ]
+}

@@ -1,163 +1,52 @@
-# Jarvis - Assistant Personnel IA avec Ollama
+# 🤖 Jarvis - Assistant Personnel IA
 
-Un assistant personnel IA local utilisant **Ollama** et **Mistral** sur une **RTX 3070 8GB**.
-
-## 🚀 Caractéristiques
-
-✅ **Modèles légers** - Compatible RTX 3070 8GB  
-✅ **Lancer des applications** - Notepad, Chrome, etc.  
-✅ **Calculs mathématiques** - Dérivées, intégrales, résolution d'équations  
-✅ **Tâches basiques** - Heure, date, recherche web  
-✅ **Communication IA** - Réponses intelligentes via Ollama  
-✅ **Interface CLI intuitive**  
-
-## 📋 Pré-requis
-
-- **Ollama** installé et en cours d'exécution ([ollama.ai](https://ollama.ai))
-- **Python 3.8+**
-- **RTX 3070 8GB** (ou GPU équivalent)
-
-## 📦 Installation
-
-### 1. Démarrer Ollama
-
-```bash
-# Vérifiez qu'Ollama est lancé
-ollama serve
-```
-
-### 2. Télécharger un modèle léger (dans un autre terminal)
-
-**Pour RTX 3070 8GB, recommandé:**
-```bash
-# Mistral 7B (4-5GB) - Très bon équilibre
-ollama pull mistral
-
-# Alternative plus légère (3B)
-ollama pull neural-chat
-ollama pull dolphin-phi
-```
-
-### 3. Installer les dépendances Python
-
-```bash
-# Configurez votre environnement Python d'abord
-C:/Users/benja/AppData/Local/Python/pythoncore-3.14-64/python.exe -m pip install --upgrade pip
-
-# Installez les dépendances
-C:/Users/benja/AppData/Local/Python/pythoncore-3.14-64/python.exe -m pip install -r requirements.txt
-```
-
-### 4. Configuration
-
-Copiez `.env.example` en `.env`:
-```bash
-copy .env.example .env
-```
-
-Éditez `.env` si nécessaire:
-```env
-OLLAMA_HOST=http://localhost:11434
-OLLAMA_MODEL=mistral:latest
-USE_TTS=False
-```
-
-## ▶️ Utilisation
-
-```bash
-C:/Users/benja/AppData/Local/Python/pythoncore-3.14-64/python.exe main.py
-```
-
-### Exemples de commandes
-
-```
-💬 Vous: ouvre notepad
-Jarvis: ✓ notepad lancé avec succès
-
-💬 Vous: dérivée x**2 + 3*x
-Jarvis: Expression: x**2 + 3*x
-        Dérivée: 2*x + 3
-        Simplifié: 2*x + 3
-
-💬 Vous: résous x**2 - 4
-Jarvis: Solutions: [-2, 2]
-
-💬 Vous: heure
-Jarvis: Il est 14:30:45 (24/04/2026)
-
-💬 Vous: recherche meteo marseille
-Jarvis: ✓ Recherche lancée pour: meteo marseille
-
-💬 Vous: pourquoi le ciel est bleu?
-Jarvis: ⏳ Réflexion...
-        [Réponse d'Ollama sur le phénomène de Rayleigh]
-```
-
-## 📊 Modèles recommandés
-
-| Modèle | VRAM | Vitesse | Qualité |
-|--------|------|---------|---------|
-| Mistral 7B | 4-5GB | Rapide | Très bon |
-| Neural Chat 7B | 3-4GB | Rapide | Bon |
-| Dolphin Phi 3B | 3GB | Très rapide | Bon |
-| Orca Mini 3B | 2GB | Très rapide | Acceptable |
-
-## 🔧 Structure du projet
-
-```
-Jarvis/
-├── main.py                      # Point d'entrée
-├── requirements.txt             # Dépendances
-├── .env.example                # Configuration d'exemple
-└── jarvis/
-    ├── config.py               # Configuration
-    ├── ollama_connector.py      # Connexion Ollama
-    ├── agents/
-    │   ├── application_launcher.py  # Lancer des apps
-    │   ├── calculator.py            # Calculs math
-    │   ├── tasks.py                 # Tâches basiques
-    │   └── __init__.py
-    └── utils/
-        └── __init__.py
-```
-
-## 💡 Conseils
-
-- **Modèle**: Commencez par `mistral` (meilleur équilibre)
-- **VRAM**: Vérifiez avec `ollama ps` pour voir la consommation
-- **Performance**: Ajustez `OLLAMA_MODEL` dans `.env` pour plus/moins de puissance
-- **Offline**: Fonctionne complètement hors ligne une fois le modèle téléchargé
-
-## 📝 Notes
-
-- Les réponses de l'IA dépendent de la qualité du modèle
-- Pour une meilleure reconnaissance mathématique, utilisez des symboles clairs
-- Les tâches système (arrêt, redémarrage) nécessitent les permissions appropriées
-
-## 🐛 Dépannage
-
-**Ollama ne répond pas?**
-```bash
-# Vérifiez que c'est lancé
-ollama serve
-```
-
-**Modèle non trouvé?**
-```bash
-# Téléchargez-le
-ollama pull mistral
-```
-
-**Erreur de VRAM?**
-```bash
-# Utilisez un modèle plus léger
-ollama pull orca-mini
-```
-
-## 📄 Licence
-
-Libre d'utilisation
+Bienvenue dans Jarvis, votre assistant personnel intelligent alimenté par une IA locale. Un compagnon virtuel capable d'écouter, de comprendre et d'agir pour faciliter votre quotidien.
 
 ---
 
-**Créé pour RTX 3070 8GB** 🚀
+## ✨ Fonctionnalités principales
+
+### 🎤 Interface Vocale Naturelle
+Interagissez avec Jarvis en utilisant votre voix. L'assistant écoute, comprend vos demandes et vous répond de manière fluide et naturelle, créant une conversation authentique avec votre machine.
+
+### 🧠 Intelligence Adaptative
+Jarvis apprend de vos interactions. Doté d'une mémoire persistante, il retient vos préférences, vos habitudes et améliore continuellement sa compréhension de vos besoins.
+
+### 📊 Calculs et Analyses
+Besoin de faire des calculs complexes ? Jarvis est là pour vous. Des simples opérations mathématiques aux analyses plus complexes, laissez votre assistant gérer les chiffres.
+
+### ✅ Gestion de Tâches
+Créez, gérez et suivez vos tâches sans effort. Dites simplement à Jarvis ce que vous voulez faire, et il s'occupera de le garder en mémoire et de vous rappeler quand nécessaire.
+
+### 🚀 Lancement d'Applications
+Lancez vos applications préférées par simple commande vocale. Plus besoin de naviguer dans les menus, une phrase suffit pour démarrer ce dont vous avez besoin.
+
+### 🌐 Navigation Web
+Explorez le web avec l'aide de Jarvis. Effectuez des recherches, consultez des informations en ligne, le tout commandé par votre voix.
+
+### 👁️ Capacités Visuelles
+Jarvis peut analyser des images et des contenus visuels. Montrez-lui une photo et il peut l'interpréter, l'analyser et vous en discuter.
+
+### 💬 Compréhension Intelligente
+Jarvis comprend le contexte et les intentions derrière vos paroles. Il sait distinguer une question d'une demande d'action, et ajuste sa réponse en conséquence.
+
+### 🔄 Boucle de Conversation Fluide
+Une expérience conversationnelle naturelle et sans friction. Posez des questions, attendez les réponses, continuez la discussion - tout s'enchaîne naturellement.
+
+### 🏠 Contrôle Local et Privé
+Votre assistant fonctionne localement sur votre machine. Vos données restent vôtres, vos conversations sont privées, et vous conservez le contrôle total.
+
+---
+
+## 🎯 Cas d'Usage
+
+- **Productivité** : Gérez vos tâches et votre calendrier les mains libres
+- **Apprentissage** : Posez des questions et obtenez des explications immédiates
+- **Assistance quotidienne** : Calculatrice vocale, rappels, recherches web
+- **Accessibilité** : Interface 100% vocale pour une meilleure accessibilité
+- **Automatisation** : Lancez des applications et des workflows par la voix
+
+---
+
+**Jarvis : Votre compagnon intelligent au quotidien.** 🌟
+

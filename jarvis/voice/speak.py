@@ -5,7 +5,7 @@ import threading
 from jarvis.voice.human import human_delay, humanize_text
 from jarvis.voice.audio import audio_engine
 
-VOICE = "fr-FR-DeniseNeural"
+VOICE = "fr-FR-HenriNeural"
 
 
 def _run_speech(text):

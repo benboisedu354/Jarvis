@@ -7,3 +7,4 @@ pygame
 edge-tts
 playwright
 SpeechRecognition
+psutil

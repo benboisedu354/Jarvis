@@ -10,23 +10,21 @@ def main():
     state.active = False
     # Je veux que Jarvis soit actif uniquement quand je lui parle, pas besoin de dire "Jarvis" à chaque fois
 
-    while state.running:
+    while True:
         try:
             text = listen_micro()
+            run_voice_loop()
 
             if not text:
                 continue
 
-            text = text.lower()
+            response = ask_llm(text)
 
-            # 🛑 ARRÊT COMPLET
-            if "arrêt jarvis" in text or "arret jarvis" in text or "stop jarvis" in text:
-                speak("Arrêt du système. À bientôt.")
-                state.running = False
-                state.active = False
-                break
-            
+            # 😴 si en veille → ne rien dire
+            if response is None:
+                continue
 
+            speak(response)
 
         except KeyboardInterrupt:
             print("\nArrêt clavier détecté")

@@ -1,0 +1,26 @@
+{
+  "personal": {
+    "nom": {
+      "value": "Benjamin",
+      "timestamp": "2026-04-27T00:28:36.767479"
+    },
+    "profession": {
+      "value": "Etudiant en informatique",
+      "timestamp": "2026-04-27T00:28:36.767983"
+    }
+    },
+  "goals": {
+    "CESI": {
+      "value": "Integrer le CESI",
+      "timestamp": "2026-04-27T00:28:36.768490"
+    },
+    "Alternance": {
+      "value": "Trouver une alternance",
+      "timestamp": "2026-04-27T00:28:36.768743"
+    },
+    "Muscle": {
+      "value": "Transformation physique",
+      "timestamp": "2026-04-27T00:28:36.768896"
+    }
+  }
+}
